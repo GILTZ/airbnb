@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p id="user_navbar"><% if user_signed_in? %>
+  Hello <%= current_user.email %>!
+  <%= link_to 'Sign out', destroy_user_session_path, method: 'delete', class: "btn btn-danger" %>
+<% else %>
+  <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary" %>
+  <%= link_to 'Sign in', new_user_session_path, class: "btn btn-success" %>
+<% end %></p>
+
+<h1 id="bienvenue">Bienvenue à la maison</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Description</th>
+      <th>Arrive date</th>
+      <th>Leaving date</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.name %></td>
+        <td><%= location.position %></td>
+        <td><%= location.description %></td>
+        <td><%= location.arrive_date %></td>
+        <td><%= location.leaving_date %></td>
+        <td><%= location.price %> €/ nuit</td>
+        <td><%= link_to 'Show', location %></td>
+        <td><%= link_to 'Edit', edit_location_path(location) %></td>
+        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Location', new_location_path %>
