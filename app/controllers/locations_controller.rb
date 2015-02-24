@@ -1,5 +1,5 @@
 class LocationsController < ApplicationController
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
   # GET /locations

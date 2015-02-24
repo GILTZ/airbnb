@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-wagon" role="navigation">
+<nav class="navbars navbar-default navbar-wagon" role="navigation">
   <div class="container-fluid">
 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -9,7 +9,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-      <a class="navbar-brand" href="/"><%= image_tag "logo.png", id: "logo" %></a>
+      <a href="/"><%= image_tag "logo.png", id:"logo" %></a>
   </div>
 <!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -59,7 +59,7 @@
   </li>
     <% end %>
   <li>
-    <%= link_to t(".top_call_to_action", default: "Publiez votre annonce"), "#", class: "btn" %>
+    <%= link_to t(".new_location", default: "Publiez votre annonce"), new_location_path %>
   </li>
 </ul>
 
