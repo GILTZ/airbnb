@@ -6,7 +6,6 @@ class CreateLocations < ActiveRecord::Migration
       t.text :description
       t.date :arrive_date
       t.date :leaving_date
-      t.integer :price
 
       t.timestamps null: false
     end
