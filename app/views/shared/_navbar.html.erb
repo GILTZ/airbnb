@@ -1,4 +1,4 @@
-<nav class="navbars navbar-default navbar-wagon" role="navigation">
+<nav class="navbars navbar-default" role="navigation">
   <div class="container-fluid">
 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -51,18 +51,46 @@
   </li>
     <% else %>
   <li>
-    <%= link_to t(".sign_up", default: "Sign up"), new_user_registration_path %>
+<a data-toggle="modal" href="/users/sign_up" data-target="#myModal">Sign up</a>
+    <!--<%= link_to t(".sign_up", default: "Sign up"), new_user_registration_path %>-->
   </li>
 
   <li>
-    <%= link_to t(".sign_in", default: "Sign in"), new_user_session_path %>
+    <a data-toggle="modal" href="/users/sign_in" data-target="#myModal">Sign in</a>
+    <!--<%= link_to t(".sign_in", default: "Sign in"), new_user_session_path %>-->
   </li>
     <% end %>
   <li>
-    <%= link_to t(".new_location", default: "Publiez votre annonce"), new_location_path %>
+
+
+<!-- Button trigger modal-->
+<!--<a data-toggle="modal" href="/locations/new" data-target="#myModal">Publiez votre annonce</a>-->
+
+  <%= link_to t(".new_location", default: "Publiez votre annonce"), new_location_path %>
+
+
+
   </li>
 </ul>
 
 </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog"><div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4>In progress</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 // Place all the styles related to the Locations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 #bienvenue {
   color: #ffffff;
   font-weight: bold;
@@ -28,6 +29,19 @@
   text-align: center;
   text-transform: uppercase;
 }
+#titre4 {
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+#titre5 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 30px;
+}
 
 #user_navbar {
   text-align: right;
@@ -44,7 +58,7 @@
 #banner {
   background-color: #000000;
     background-image: image-url("im1.jpg");
-    padding: 150px 0px;
+        padding: 150px 0px;
         padding-top: 150px;
         padding-right-value: 0px;
         padding-bottom: 150px;
@@ -56,9 +70,7 @@
     background-size: cover;
     height: 650px;
   }
-  .bg-grey {
-  background-color: grey;
-  }
+
 .navbars {
   position: relative;
   min-height: 50px;
@@ -71,15 +83,20 @@
     margin-left: auto;
     margin-right: auto
 }
-.bg-blackimg {
+.imex-margin {
+  padding-bottom: 30px;
+}
+.imex-margin-top {
+  padding-top: 30px;
+}
+.bgsimg {
     background-color: #000000;
-    background-image: image-url("imbgblack.png");
     background-repeat: repeat;
 
     padding: 150px 0px;
-        padding-top: 150px;
+        padding-top: 0px;
         padding-right-value: 0px;
-        padding-bottom: 150px;
+        padding-bottom: 0px;
         padding-left-value: 0px;
         padding-left-ltr-source: physical;
         padding-left-rtl-source: physical;
@@ -87,9 +104,94 @@
         padding-right-rtl-source: physical;
     height: 650px;
 }
-
+#imbgblack{
+  background-image: image-url("imbgblack.png");
+}
+#imbgwhite {
+  background-image: image-url("imbgwhite.png");
+}
 .profilpic {
   height: 30px;
   weight: 30px;
   border-radius: 15px;
+}
+
+ a.bulle {
+     position:relative;
+     color:#000000;
+     text-decoration:none;
+     font-family:arial, verdana, sans-serif;
+     text-align:center;
+     font-size:11px;
+   }
+
+   a.bulle:hover {
+      background: none;
+      z-index: 50;
+   }
+
+   a.bulle span {
+     display: none;
+   }
+
+   a.bulle:hover span {
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: 40px;
+      font-family:arial, verdana, sans-serif;
+      text-align:justify;
+      font-size:12px;
+      font-weight:normal;
+      width:400px;
+      background: white;
+      padding: 5px;
+      border: 1px solid #62c0f4;
+      border-left: 10px solid #62c0f4;
+   }
+
+.picindex {
+  display: inline-block;
+  height: 300px;
+  width: 200px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: center;
+  font-size: 20px;
+  line-height:300px;
+  margin-right: 20px;
+}
+#am {
+  background-image: image-url("amsterdam.jpg");
+}
+#be {
+  background-image: image-url("berlin.jpg");
+}
+#br {
+  background-image: image-url("brussels.jpg");
+}
+#lo {
+  background-image: image-url("london.jpg");
+}
+#ma {
+  background-image: image-url("madrid.jpg");
+}
+#pa {
+  background-image: image-url("paris.jpg");
+}
+#ro {
+  background-image: image-url("rome.jpg");
+}
+#os {
+  background-image: image-url("oslo.jpg");
+}
+
+.titelbottom{
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+}
+ul{
+    list-style-type: none;
 }
